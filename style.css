@@ -1,0 +1,43 @@
+h1, p {
+  font-family: Lato;
+}
+
+.loader {
+  border: 2px solid #f3f3f3; /* Light grey */
+  border-top: 2px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.link-with-caption {
+  position: relative;
+  width: 257px;
+}
+
+.caption-on-hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255);
+  color: #000;
+  visibility: hidden;
+
+  padding: 20px;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.link-with-caption:hover .caption-on-hover {
+  visibility: visible;
+  opacity: 1;
+}
